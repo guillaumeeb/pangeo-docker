@@ -1,3 +1,3 @@
 FROM pangeo/pangeo-notebook:latest
 
-RUN mamba install --yes xgboost lightgbm && mamba clean -yaf
+RUN conda activate ${CONDA_ENV} && mamba install --yes xgboost lightgbm && mamba clean -yaf
